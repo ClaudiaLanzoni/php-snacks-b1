@@ -44,6 +44,64 @@ $posts = [
 ];
 ?>
 
+    <!-- Dati Snack 3 -->
+
+    <?php
+ 
+ $db = [
+     'teachers' => [
+         [
+             'name' => 'Michele',
+             'lastname' => 'Papagni'
+         ],
+         [
+             'name' => 'Fabio',
+             'lastname' => 'Forghieri'
+         ]
+     ],
+     'pm' => [
+         [
+             'name' => 'Roberto',
+             'lastname' => 'Marazzini'
+         ],
+         [
+             'name' => 'Federico',
+             'lastname' => 'Pellegrini'
+         ]
+     ]
+ ];
+
+?>
+
+
+    <!-- Dati Snack 4 -->
+
+    <?php 
+        $classe = [
+            [
+                'nome' => 'Gino',
+                'cognome' => 'Finelli',
+                'voti' => [5, 8, 9, 6]
+            ],
+            [
+                'nome' => 'Martino',
+                'cognome' => 'Pinelli',
+                'voti' => [9, 6, 7, 4]
+            ],
+            [
+                'nome' => 'Marta',
+                'cognome' => 'Martinelli',
+                'voti' => [6, 6, 9, 6]
+            ],
+            [
+                'nome' => 'Sandra',
+                'cognome' => 'Sandrelli',
+                'voti' => [8, 8, 5, 6]
+            ],
+        ]
+
+        ; ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -120,36 +178,9 @@ $posts = [
         <!-- Utilizzare questo array: https://pastebin.com/CkX3680A
     Stampiamo il nostro array mettendo gli insegnanti in un rettangolo grigio e i PM in un rettangolo verde. -->
 
-    <?php
- 
-    $db = [
-        'teachers' => [
-            [
-                'name' => 'Michele',
-                'lastname' => 'Papagni'
-            ],
-            [
-                'name' => 'Fabio',
-                'lastname' => 'Forghieri'
-            ]
-        ],
-        'pm' => [
-            [
-                'name' => 'Roberto',
-                'lastname' => 'Marazzini'
-            ],
-            [
-                'name' => 'Federico',
-                'lastname' => 'Pellegrini'
-            ]
-        ]
-    ];
- 
-?>
-
-    <?php 
     
-        $teachers = $db['teachers'];
+    <?php 
+        /**$teachers = $db['teachers'];
         $pm = $db['pm'];
 
        //echo var_dump($teachers); ?>
@@ -184,6 +215,36 @@ $posts = [
 
         </div>
 
+         * 
+         */
+        
+        ?>
+
+
+
+        <!-- Creare un array contenente qualche alunno di un'ipotetica classe. 
+        Ogni alunno avrà Nome, Cognome e un array contenente i suoi voti scolastici. 
+        Stampare Nome, Cognome e la media dei voti di ogni alunno. -->
+
+        
+            <?php 
+            /**foreach ($classe as $valore) { ?>
+                <h1>
+                    <?php echo ($valore ['nome']); ?>
+                    <?php echo ($valore ['cognome']); ?>
+                    <?php echo (array_sum($valore ['voti']) / count($valore ['voti'])) ?>
+                </h1>
+                <?php    
+            }
+             */
+            
+             ?>
+
+            
+            
+        
+        
+        
 
 
 </body>
