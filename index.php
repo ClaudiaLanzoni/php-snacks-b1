@@ -240,12 +240,34 @@ $posts = [
             
              ?>
 
-            
-            
         
+        <!-- Prendere un paragrafo abbastanza lungo, contenente diverse frasi. 
+        Prendere il paragrafo e suddividerlo in tanti paragrafi. Ogni punto un nuovo paragrafo.-->
+
+        <?php 
+        $paragrafo = 'Il paragrafo (o capoverso) è innanzitutto una porzione di testo formata da uno o più periodi e isolata da ciò che precede e ciò che segue. All’interno del paragrafo sono raggruppate porzioni di informazione omogenee, perciò il passaggio a un nuovo capoverso (il cosiddetto a capo) implica una pausa molto forte nel testo.
+
+        Nell’editoria e nella scrittura con il computer il paragrafo è messo in evidenza con un breve rientro della riga di inizio del primo periodo del paragrafo o con una riga vuota tra un paragrafo e l’altro (paragrafo all’inglese).
+        
+        Con il termine paragrafo si intende anche una suddivisione interna a un capitolo, spesso dotata di titolo e isolata con soluzioni grafiche.';
         
         
 
+        $divisorio = explode('.', $paragrafo);
+        
+        ; ?>
+
+        <?php 
+        foreach($divisorio as $valore) { ?>
+            <div>
+                <?php echo ($valore) . '.'?>
+                
+            </div>
+            
+        <?php } ; ?>
+
+        <?php phpinfo(); ?>
+        
 
 </body>
 </html>
